@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="UTF-8"> <!-- meta tags requis -->
+		<!-- lien vers Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="monbootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="moncss/style.css">
+		<title> Loisirs </title>
+	</head>
+	
+	<body>
+		<!--Balise "div" pour la barre en haut de page --> 
+		<div id="page">
+			<header>
+				<div id="logo"> <!--bloc pour l'image du logo-->
+					<img src="img/folio.jpg" alt="image logo">
+				</div>
+				<div id="etudiant"> <!--bloc pour le Nom Prenom Statut-->
+					<h1>Vanessa Pham</h1>
+					<p>Etudiante</p>
+				</div>
+			</header>
+			<nav class="menu"> <!-- creer un menu sous forme de liste qui renvoit vers une autre page html-->
+				<ul>
+					<li><a href="accueil.html">Accueil</a></li>
+					<li><a href="competences.html">Compétences</a></li>
+					<li><a href="experiences.html">Expériences</a></li>
+					<li><a href="loisirs.html">Loisirs</a></li>
+				</ul>			
+			</nav>
+		</div>
+<!--******* Les lignes au dessus sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 
+
+		<!--*********************** A partir de cette ligne nous sommes sur la page "Loisirs" *******************-->
+		<section class="contenu_loisirs">
+			<h2>Vous vous trouvez sur la page "Mes Loisirs"</h2>
+			<p> Mes centres d'intérêt sont :</p>
+			<div class="menu_loisirs"> <!--liste avec menu déroulant-->
+				<ul>
+					<li>Jeux vidéos
+						<ul>
+							<li>Animal Crossing</a></li>
+							<li>Genshin Impact</li>
+						</ul>
+					</li>
+					<li>Musique
+						<ul>
+							<li>BTS</li>
+							<li>Blackpink</li>
+						</ul>
+					</li>
+					<li>Lecture
+						<ul>
+							<li>One piece</li>
+							<li>Harry Potter</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!---***************************Debut du Bootstrap**********************************************-->
+		<section class="contenu_loisirs">
+		<h2>Mes Célébrités préférées sont :</h2></br>
+		<!---***************************Debut Media object**********************************************-->
+			<ul class="list-unstyled">
+				<li class="media">
+					<img src="img/lisa.jpg" width="60" height="80" class="mr-3" alt="lisa">
+					<div class="media-body">
+						<h5 class="mt-0 mb-1">Lalisa Monoban</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</li>
+				<li class="media my-4">
+					<img src="img/rose.jpg" width="60" height="80" class="mr-3" alt="rose">
+					<div class="media-body">
+						<h5 class="mt-0 mb-1">Roseanne Park</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</li>
+				<li class="media">
+					<img src="img/jk.jpg" width="60" height="80" class="mr-3" alt="jungkook">
+					<div class="media-body">
+						<h5 class="mt-0 mb-1">Jeon Jungkook</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</li>
+			</ul>
+		<!---***************************Fin Media object**********************************************-->
+		</section>
+		<section class="contenu_loisirs">
+			<h2>Mes images favorites sont :</h2>
+		<!---***************************Debut Carousel**********************************************-->
+			<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+				<div class="carousel-item active" data-interval="10000">
+				  <img src="img/lila.JPG" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item" data-interval="2000">
+				  <img src="img/lila.JPG" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				  <img src="img/lila.JPG" class="d-block w-100" alt="...">
+				</div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </button>
+			</div>
+		<!---***************************Debut Carousel**********************************************-->
+		</section>
+	<!---***************************Fin du Bootstrap**********************************************-->
+	
+		<section class="contenu_loisirs">
+			<h2>Ma vidéo favorite est :</h2>
+			<div class="video">
+				<iframe src="https://www.youtube.com/embed/lcZDWo6hiuI"></iframe><!--intégrer une video-->
+			</div>
+		</section>
+		
+<!--******* Les lignes en dessous sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 		
+		<footer>
+			<div class="foot">
+				<h3>Téléphone</h3>
+				<p>XX-2A-00-11-22</p>
+			</div>
+			<div class="foot">
+				<h3>Adresse</h3>
+				<p>XX rue Xxxxx 75009</p>
+			</div>
+			<div class="foot">
+				<h3>Email</h3>
+				<p><a href="mailto:XXX.XXX@gmail.com"> XXX.XXX@gmail.com</a></p>
+			</div>
+		</footer>
+	</body>	
+</html>

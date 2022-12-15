@@ -1,0 +1,392 @@
+/******** DEBUT CSS Communs à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******/yo
+body {
+	background-color:#CDF0EA;/*bleu pastel*/
+}
+
+/*on cible la div "page" pour créer une barre en ligne*/
+#page {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex; /*mettre sur une même ligne les blocs (header et nav) de "page"*/
+	flex-wrap: wrap; /*passer à la ligne si les éléments ne rentrent pas sur une ligne*/
+	justify-content: space-between; /*avoir un espace entre les éléments*/
+	align-items: center; /*aligner horizontalement les éléments de la ligne*/
+	background-color:#BEAEE2;/*violet pastel*/
+	font-family: Arial, sans-serif;
+}
+
+/*on cible "header" pour créer pour mettre en ligne ses éléments*/
+header {
+	display: flex; /*logo et etudiant */
+	align-items: center;
+}
+
+/*on cible l'image "ePortfolio" pour régler ses dimensions*/
+#logo img {
+	width:210px;
+	height:80px;
+	border: 1px solid black;
+	border-radius: 40px; /*arrondir les 4 bords*/
+}
+
+#logo {
+	padding: 1%;
+	margin: 0% 2%;
+}
+
+/*on cible le nom prénom statut*/
+#etudiant{
+	font-size:11px; /*taille du texte*/
+	width: 250px;
+	padding: 0% 5%;
+	margin: 0% 2%;
+	color: white;
+}
+
+/*on cible le h1 dans la div "etudiant" */
+#etudiant h1 {
+	font-size:22px; /*taille du texte*/
+	font-weight: bold;
+}	
+
+/*on cible la liste */
+.menu ul li {
+	font-size:18px;
+	list-style-type:none; /*retirer les puces*/
+	display: inline-block; /*liste en ligne*/
+	margin-right: 3px;
+	padding: 4px;
+	cursor: pointer; /*curseur/main pour indiquer qu'il y a un lien et qu'on peut cliquer lors du survole*/
+	background-color: white;
+}
+
+/*changement de la couleur du fond lors du survole*/
+.menu ul li:hover {
+	background-color:#F1D4D4;
+}
+
+/*on cible tous les liens et on retire le soulignement*/
+a:link { 
+	text-decoration:none;
+} 
+
+/*adapter selon la taille de l'écran, 700px correspond a peu près à un écran de téléphone*/
+/*Responsive*/
+@media screen and (max-width: 700px) {
+	#page {
+		justify-content: center;
+	}
+}
+
+		/***********************************DEBUT footer********************************/
+/*On cible le footer*/
+footer {
+	margin-top: 5%;
+	margin-bottom:0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; /*espace autour des items*/
+	background-color:#BEAEE2;
+	padding: 5px;
+	bottom: 0;
+}		 
+
+/*On cible la div "foot"*/
+.foot {
+	margin:5px;
+	padding: 10px;
+}
+
+/*on cible les p de .foot*/
+footer .foot p {
+	font-size: 12px;
+}
+
+@media screen and (max-width: 700px) {
+	footer {
+		display:flex;
+	}
+}
+		/***************************************FIN footer**********************************/
+
+/******** FIN CSS Communs à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******/
+
+		/*********************** DEBUT A partir de cette ligne nous sommes sur la page "Accueil" *******************/
+/*on cible la div .contenu_accueil*/
+.contenu_accueil {
+	background-color:#F9F9F9;
+	padding: 2% 4%;
+	margin: 4%;
+	border-radius: 30px;
+}
+
+/*on cible les h2 pour modifier la taille de la police*/
+.contenu_accueil h2 {
+	font-size: 28px;
+}
+
+/*on cible les p pour agrandir les interlignes et changer la police*/
+.contenu_accueil p {
+	font-family: Arial, sans-serif;
+	line-height: 25px;
+}
+
+	/*********************************debut pour le formulaire *************************/
+/*on cible le bouton .open_button*/ 
+.contenu_accueil .open_button {
+	border-radius: 30px;
+	background-color: #F7DBF0; /*Rose pastel*/
+	padding: 5px;
+	margin-top: 10px; 
+	font-size: 20px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+/*changement de couleur lors du survole*/
+.contenu_accueil button:hover {
+	color: #BEAEE2;
+}
+
+/*on cible la div class=form_popup", formulaire popup (surgissant) qui est caché par défaut*/
+.form_popup{
+	display: none;
+	position: fixed;
+	padding: 5px;
+	bottom: 20px;
+	left: 20px;
+	border: 3px solid black;
+	background-color: #BEAEE2;	
+}
+
+/*on cree un effet de survole sur tt les buttons*/
+.open_button:hover,.btn:hover,.btn_annulation:hover {
+	opacity: 1;
+}
+
+/*on cible le button annulation class=btn_annulation"*/
+.btn_annulation {
+	width: 100%;
+	background-color: tomato;
+	margin-top: 5px;
+	padding: 16px 20px;
+	cursor: pointer;
+	border:none;
+	color: white;
+	opacity: 0.8;
+}
+
+/*on cible le button connexion class="btn"*/
+.btn_connexion {
+	width: 100%;
+	background-color: green;
+	padding: 16px 20px;
+	cursor: pointer;
+	border:none;
+	color: white;
+	opacity: 0.8;
+}
+/*********************************Fin pour le formulaire *************************/
+
+@media screen and (max-width: 700px) {
+	.contenu_accueil {
+		justify-content: center;
+		max-width: 100%;
+	}
+}
+/********************************FIN page "Accueil" *******************************************/
+
+/********************************DEBUT page "Expériences" *******************************************/
+
+/*on cible la div .contenu_exp*/
+.contenu_exp {
+	background-color:#F9F9F9;
+	padding: 2% 4%;
+	margin: 4%;
+	border-radius: 30px;
+}
+
+/*on cible le h2 pour modifier la taille de la police*/
+.contenu_exp h2 {
+	font-size: 28px;
+}
+
+/*on cible la div .projects(avec un s) qui englobe les "project"*/
+.contenu_exp .projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*on cible chaque "projet"*/
+.contenu_exp .project {
+	background-color: #F7DBF0;
+	font-size: 20px;
+	margin: 20px;
+	padding: 20px;
+	max-width: 195px;
+	border-radius: 40px;
+}
+
+/*On cible les h3*/
+.contenu_exp .project h3 {
+	margin: 1%;
+}
+
+/*On cible les p .description*/
+.contenu_exp .project .description {
+	font-size: 15px;
+}
+
+/*On cible les p .dates*/
+.contenu_exp .project .dates {
+	font-size: 13px;
+	color: grey;
+}
+
+@media screen and (max-width: 700px) {
+	.contenu_exp .project {
+		justify-content: center;
+		max-width: 100%;
+	}
+}
+/********************************FIN page "Expériences" *******************************************/
+
+/********************************DEBUT page "Compétences" *******************************************/
+
+/*on cible la div .contenu_exp*/
+.contenu_competences {
+	background-color:#F9F9F9;
+	padding: 2% 4%;
+	margin: 4%;
+	border-radius: 30px;
+}
+
+/*on cible le h2 pour modifier la taille de la police*/
+.contenu_competences h2 {
+	font-size: 28px;
+}
+
+	/**************************************debut tableaux********************/
+/*On cible les tableaux*/
+table {
+	width:auto;
+	border-collapse: collapse;
+	box-shadow: 0 5px 10px black; /*crée de l'ombre*/
+	margin:10px auto;
+}
+
+/*On cible caption de table */
+table caption {
+	font-size:20px;
+}
+
+/*On cible les th soit les cellules en 1ere colonne et ligne */
+table th {
+	min-width:100px;
+	border: 1px solid black;
+	width:auto;
+	background-color:#F7DBF0;
+	padding: 7px 10px;
+}
+
+/*On cible les cellules td*/
+td {
+	padding: 7px 10px;
+	border: 1px solid black;
+	text-align: center;
+}
+	/**************************************fin tableaux********************/
+	
+@media screen and (max-width: 750px){
+	table, thead, tbody, tr, th, td {
+		display:block;
+	}
+}
+
+/********************************FIN page "Compétences" *******************************************/
+
+/********************************DEBUT page "Loisirs" *******************************************/
+/*On cible le h2 de contenu_loisirs*/
+.contenu_loisirs h2 {
+	font-size: 28px;
+}
+
+/*On cible contenu_loisirs*/
+.contenu_loisirs {
+	background-color:#F9F9F9;
+	padding: 2% 4%;
+	margin: 4%;
+	border-radius: 30px;
+}
+
+/************************ debut menu et sous menus***************************/
+ /*on cible les ul*/
+.menu_loisirs ul{
+	border: 1px solid #BEAEE2;
+	padding: 10% auto;
+	flex-wrap: wrap;
+}
+
+/*on cible les li des ul*/
+.menu_loisirs ul li {
+	width: 20%;
+	background-color:#CDF0EA ;
+	padding: 10px;
+	margin: 0 6%;
+}
+
+/*on cible les li*/
+.menu_loisirs li {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	margin: 0px;
+	padding: 100px;
+}
+
+/*on cible les li dans ul dans li dans ul*/
+.menu_loisirs ul li ul li {
+	display: block;
+	text-align:center;
+}
+
+/*Les elements "ul ul" sont cachés par défault*/
+.menu_loisirs ul ul {
+	position:absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background-color: #F7DBF0;
+}
+
+/*lors du survole les éléments cachés déroules*/
+.menu_loisirs ul li:hover ul{
+	visibility: visible;
+}
+/************************fin menu et sous menus***************************/
+
+@media screen and (max-width: 750px){
+	ul ul {
+		display: block;
+	}
+}
+
+/*rendre responsive une video*/
+.video { 
+overflow:hidden; 
+padding-bottom:56.25%; 
+position:relative; 
+height:0;
+}
+
+.video iframe {
+left:0; 
+top:0; 
+height:100%;
+width:100%;
+position:absolute;
+}
+/********************************FIN page "Loisirs" *******************************************/
+/********************************FIN Du CSS" *******************************************/

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- meta tags requis -->
+		<!-- lien vers le CSS et bootstrap -->
+		<link rel="stylesheet" type="text/css" href="monbootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="moncss/style.css">
+		<title> Accueil </title>
+	</head>
+	
+	<body>
+		<!--Balise "div" pour la barre en haut de page --> 
+		<div id="page">
+			<header>
+				<div id="logo"> <!--bloc pour l'image du logo-->
+					<img src="img/folio.jpg" alt="image logo">
+				</div>
+				<div id="etudiant"> <!--bloc pour le Nom Prenom Statut-->
+					<h1>Vanessa Pham</h1>
+					<p>Etudiante</p>
+				</div>
+			</header>
+			<nav class="menu"> <!-- creer un menu sous forme de liste qui renvoit vers une autre page html-->
+				<ul>
+					<li><a href="accueil.html">Accueil</a></li>
+					<li><a href="competences.html">Compétences</a></li>
+					<li><a href="experiences.html">Expériences</a></li>
+					<li><a href="loisirs.html">Loisirs</a></li>
+				</ul>			
+			</nav>
+		</div>
+<!--******* Les lignes au dessus sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 
+
+		<!--*********************** A partir de cette ligne nous sommes sur la page "Accueil" *******************-->
+		<section class="contenu_accueil"> <!-- 2 articles et 1 popup formulaire -->
+			<article>
+				<h2>Bienvenue ! Je suis étudiante à <a href="https://iutparis-seine.u-paris.fr/">l'IUT Paris Descartes</a></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+			<article>
+				<h2>À propos de moi</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>	
+			
+	<!--*****************************Creation d'un formulaire de contacte en popup******************* -->
+			<button class="open_button" onclick="openform()">Contactez-moi ici</button>			
+			<div class="form_popup" id="myform">
+				<form action="#" method="" class="form_container"> <!--method nulle volontairement, sinon "post" ou "get" -->
+					<fieldset align="center"> <!--Les items au centre-->
+					<legend>Contactez-moi</legend><br/>
+						<label for="name" class="info_contacte">Votre Nom</label> <!--Legende--> 
+						<input class="info_contacte_input" type="text" placeholder="saisissez votre Nom" id="Nom" name="Nom_contacte"><br/><br/> <!--champs remplissable-->
+						<label for="email" class="info_contacte">Votre Email</label>
+						<input class="email_contacte" type="email" placeholder="saisissez votre Email" id="Email "name="Email" required><br/><br/>						
+						<label for="message" class="info_contacte">Votre Message</label>
+						<textarea class="message_contacte" type="text" name="comment" placeholder="saisissez votre message" id="msg "name="message" rows="4" size="18" maxlength="250"></textarea><br/><br/> <!--champs plus large que email et nom-->					
+						<button type="submit" class="btn_connexion">Envoyer</button> <!--bouton de soumission-->
+						<button type="button" class="btn_annulation" onclick="closeform()">Annuler</button> <!--bouton de sortie-->
+					</fieldset>
+				</form>
+			</div>
+			<!-- instructions pour les butons openform() et closeform()-->
+			<script>
+				function openform(){
+					document.getElementById("myform").style.display="block";
+				}			
+				function closeform(){
+					document.getElementById("myform").style.display="none";
+				}
+			</script>			
+		</section>	
+		<!--***************************************Fin formulaire de contacte en popup******************* -->
+		
+<!--******* Les lignes en dessous sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 		
+		<footer>
+			<div class="foot">
+				<h3>Téléphone</h3>
+				<p>XX-2A-00-11-22</p>
+			</div>
+			<div class="foot">
+				<h3>Adresse</h3>
+				<p>XX rue Xxxxx 75009</p>
+			</div>
+			<div class="foot">
+				<h3>Email</h3>
+				<p><a href="mailto:XXX.XXX@gmail.com"> XXX.XXX@gmail.com</a></p>
+			</div>
+		</footer>
+	</body>	
+</html>

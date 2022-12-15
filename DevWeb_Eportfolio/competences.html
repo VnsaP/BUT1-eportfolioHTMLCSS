@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- meta tags requis -->
+		<!-- lien vers Bootstrap et CSS -->
+		<link rel="stylesheet" type="text/css" href="monbootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="moncss/style.css">
+		<title> Compétences </title>
+	</head>
+	
+	<body>
+		<!--Balise "div" pour la barre en haut de page --> 
+		<div id="page">
+			<header>
+				<div id="logo"> <!--bloc pour l'image du logo-->
+					<img src="img/folio.jpg" alt="image logo">
+				</div>
+				<div id="etudiant"> <!--bloc pour le Nom Prenom Statut-->
+					<h1>Vanessa Pham</h1>
+					<p>Etudiante</p>
+				</div>
+			</header>
+			<nav class="menu"> <!-- creer un menu sous forme de liste qui renvoit vers une autre page html-->
+				<ul>
+					<li><a href="accueil.html">Accueil</a></li>
+					<li><a href="competences.html">Compétences</a></li>
+					<li><a href="experiences.html">Expériences</a></li>
+					<li><a href="loisirs.html">Loisirs</a></li>
+				</ul>			
+			</nav>
+		</div>
+<!--******* Les lignes au dessus sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 
+
+		<!--*********************** A partir de cette ligne nous sommes sur la page "Compétences" *******************-->
+		<section class="contenu_competences">
+			<h2>Vous vous trouvez sur la page "Mes Compétences"</h2>
+			<table> <!--Création d'un tableau Formations-->
+				<caption>Mes Formations</caption></br>
+				<thead><!--lignes en entête-->
+					<tr>
+						<th>Diplômes</th>
+						<th>Spécialités</th>
+						<th>Régions</th>
+						<th>Ecoles</th>
+						<th>Années</th>
+						<th>Mentions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Brevet</td>
+						<td>Collège</td>
+						<td rowspan="3">Ile de France</td> <!--fusion de 3 lignes-->
+						<td>Louis Aragon</td>
+						<td>2017-2019</td>
+						<td>Très Bien</td>
+					</tr>
+					<tr>
+						<td>Baccalauréat</td>
+						<td>Général</td>
+						<td>Emily Brontë</td>
+						<td>2020-2021</td>
+						<td>Bien</td>
+					</tr>
+					<tr>
+						<td>BUT</td>
+						<td>Informatique</td>
+						<td>IUT Paris Descartes</td>
+						<td colspan="2">En cours</td><!--fusion de 2 colonnes-->
+					</tr>
+				</tbody>
+			</table></br></br><!--Fin tableau formation-->
+			<table><!--Création d'un tableau Langues-->
+				<caption>Mes Langues</caption></br>
+				<thead>
+					<tr>
+						<th>Langues</th>
+						<th>Niveau</th>
+						<th>Certifications</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Français</td>
+						<td rowspan="2" colspan="2">C2 langues maternelles</td>
+					</tr>
+					<tr>
+						<td>Vietnamien</td>
+					</tr>
+					<tr>
+						<td>Anglais</td>
+						<td rowspan="2">B1</td>
+						<td>TOEIC</td>
+					</tr>
+					<tr>
+						<td>Espagnol</td>
+						<td>DELE</td>
+					</tr>
+					<tr>
+						<td>Chinois</td>
+						<td>C1</td>
+						<td>HSK</td>
+					</tr>
+					<tr>
+						<td>Japonais</td>
+						<td>B2</td>
+						<td>JLPT</td>
+					</tr>
+					<tr>
+						<td>Italien</td>
+						<td>A2</td>
+						<td>CILS</td>
+					</tr>
+				</tbody>
+			</table><!--Fin tableau langues -->
+		</section>
+		
+<!--******* Les lignes en dessous sont communnes à toutes les pages HTML, Soit accueil.html, competences.html, expériences.html, loisirs.html ******--> 		
+		<footer>
+			<div class="foot">
+				<h3>Téléphone</h3>
+				<p>XX-2A-00-11-22</p>
+			</div>
+			<div class="foot">
+				<h3>Adresse</h3>
+				<p>XX rue Xxxxx 75009</p>
+			</div>
+			<div class="foot">
+				<h3>Email</h3>
+				<p><a href="mailto:XXX.XXX@gmail.com"> XXX.XXX@gmail.com</a></p>
+			</div>
+		</footer>
+	</body>
+</html>
